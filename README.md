@@ -168,7 +168,7 @@ aws s3 ls
        ¿Qué viste en el navegador? ¿Por qué?  El contenido de la pagina error.html , porque esta configurado
        si no encuentra la pagina nos muestre el contenido de error.html
        
-      ![ Captura 06g](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seisg.jpeg)
+      ![ Captura 06g](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/nueveb.PNG)
 
 7. Podemos definir reglas de redirección y agregar metadatos a los objetos en el bucket. 
 
