@@ -1,15 +1,19 @@
 # Amazon S3 - AWS Elastic Block Store (EBS)
 
+## S3
 
-1. Inicia sesión en el sandbox del curso. Crea un nuevo volumen de EBS con el
-siguiente comando.
-aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
+En este laboratorio, se estudiará el almacenamiento de Amazon S3. Utilizarás los comandos
+aws s3 y s3api para administrar datos en Amazon S3. Amazon S3 es un almacenamiento de
+objetos accesible a través de Internet.
 
-       ¿Qué significa este comando?
-       
-       Este comando nos permite listar los buckets que tenemos dentro de nuestro aws s3 
-       
-       ¿Qué significa este comando?
+### Parte 1: Operaciones básicas con S3
+
+    Suponga que su directorio actual es /home/aws_user (puedes cambiarlo). Envíe las
+    siguientes instrucciones y responde las preguntas que siguen.
+
+1. Enumere todos los buckets propiedad del usuario a través del siguiente comando ls.
+aws s3 ls
+¿Cuál es la salida?
 
        No muestra ninguna salida porque se encuentra vacío
 
