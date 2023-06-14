@@ -66,15 +66,25 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
        Antes de proceder a cargar el archivo hello.html, se tuvo que habilitar via amazon console manager
        lo siguiente: 
        
+       Editar el bloqueo de acceso al publico
+       
        
        ![ Captura 04a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/cuatroa.PNG) 
        
        ![ Captura 04b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/cuatrob.PNG) 
        
+       Por defecto vienen deshabilitados tanto las listas ACL como la parte de bloquear el acceso público 
+       a los buckets, por ende se deben de habilitar y posteriormente colocar el comando proporcionado.
+
+       
        ![ Captura 04c](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/cuatroc.PNG) 
        
+       ¿Cuál es la salida?
+       La salida es el mensaje siguiente:  
        
-       
+       ##### upload: ./hello.html to s3://rubencabrera/hello.html
+
+       ![ Captura 04d](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/cuatrod.PNG)
     
     
     
