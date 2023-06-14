@@ -34,7 +34,7 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
         listamos el contenido del bucket rubencabrera, 
         el mismo que esta vacio.
         
-        ![ Captura 02 ](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/tres.PNG)
+       ![ Captura 03 ](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/tres.PNG)
         
 
     
