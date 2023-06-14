@@ -135,6 +135,19 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
        
       ![ Captura 06b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seisb.PNG)
        
+       
+       Para poder personalizar los sitios web estáticos se realizó lo siguiente:
+       
+       En el bucket rubencabrera, ingresamos a propiedades, en la seccion Alojamiento de sitios web estáticos
+       lo habilitamos y posteriormente ingresamos como documento indice a index.html y como documento error a
+       error.html. Procedemos a guardar los cambios.
+       
+      ![ Captura 06c](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seisc.PNG)
+   
+      ![ Captura 06d](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seisd.PNG)
+
+       
+       
        En el navegador web de tu VM, acceda a la URL
 
        http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/
