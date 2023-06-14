@@ -18,9 +18,11 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
 2. Haz un bucket a través del siguiente comando mb: aws s3 mb s3://tu_nombre_de_usuario
        
        ¿Cuál es la salida?
-       Utilizando el comando aws s3 mb s3://rubencabrera , podemos apreciar que ya se creo el bucket rubencabrera
        
-       ![ Captura 02 ](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/dos.PNG)
+       Utilizando el comando aws s3 mb s3://rubencabrera , 
+       podemos apreciar que ya se creo el bucket rubencabrera
+       
+      ![ Captura 02 ](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/dos.PNG)
        
 
     
