@@ -90,7 +90,13 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
     
  5. Dado que se puede acceder a tu objeto s3 a través de Internet, probémoslo. En el
     navegador web de tu máquina virtual (u otra9 accede a la URL
-    http://s3.amazonaws.com/tu_nombre_de_usuario/hello.html. ¿Qué viste en el navegador?
+    http://s3.amazonaws.com/tu_nombre_de_usuario/hello.html. 
+    
+    ¿Qué viste en el navegador?
+    
+    Se visualiza el contenido de la pagina hello.html
+    
+    ![ Captura 05](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/cinco.PNG)
     
 ### Parte 2: alojamiento de sitios web estáticos con S3 
 
