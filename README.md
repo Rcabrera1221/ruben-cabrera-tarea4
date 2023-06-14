@@ -162,7 +162,7 @@ aws s3 ls
        http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/ hello.html
        ¿Qué viste en el navegador? El contenido de la pagina hello.html
        
-      ![ Captura 06f](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seisf.jpeg)
+      ![ Captura 06f](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seif.jpeg)
 
        http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/2.html. 
        ¿Qué viste en el navegador? ¿Por qué?  El contenido de la pagina error.html , porque esta configurado
