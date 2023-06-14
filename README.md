@@ -49,6 +49,31 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
     Carga el archivo en tu bucket s3 y póngalo a disposición del público con lo siguiente.
     aws s3 cp hello.html s3://tu_nombre_de_usuario --acl public-read
     ¿Cuál es la salida?
+    
+    Con el comando mkdir webpages creamos la carpeta , luego con el comando cd webpages ingresamos
+    a la carpeta, luego con el comando vi hello.html insertamos el siguiente código html :
+    
+     ```
+      <html>
+      <body>
+       <h1>Amazon S3</h1>
+              Hello World!
+       </body>
+       </html>      
+       ```
+       Grabamos con :wq!
+       
+       Antes de proceder a cargar el archivo hello.html, se tuvo que habilitar via amazon console manager
+       lo siguiente: 
+       
+       
+       
+       
+       
+       
+    
+    
+    
  5. Dado que se puede acceder a tu objeto s3 a través de Internet, probémoslo. En el
     navegador web de tu máquina virtual (u otra9 accede a la URL
     http://s3.amazonaws.com/tu_nombre_de_usuario/hello.html. ¿Qué viste en el navegador?
