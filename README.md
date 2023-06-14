@@ -21,7 +21,7 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
        Utilizando el comando aws s3 mb s3://rubencabrera , 
        podemos apreciar que ya se creo el bucket rubencabrera
        
-       ![ Captura 01 ](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/dos.PNG)
+       ![ Captura 02 ](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/dos.PNG)
        
 
     
