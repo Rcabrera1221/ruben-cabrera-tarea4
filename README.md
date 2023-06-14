@@ -155,13 +155,20 @@ aws s3 ls
        En el navegador web de tu VM, acceda a la URL
 
        http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/
-       ¿Qué viste en el navegador? ¿Por qué? Ahora, acceda a
+       ¿Qué viste en el navegador? ¿Por qué? Ahora, accede porque esta configurado como documento indice index.html
+       
+      ![ Captura 06e](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seise.jpeg)
        
        http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/ hello.html
-       ¿Qué viste en el navegador? A continuación, acceda a
+       ¿Qué viste en el navegador? El contenido de la pagina hello.html
+       
+      ![ Captura 06f](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seisf.jpeg)
 
-       http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/2.html. ¿Qué
-       viste en el navegador? ¿Por qué?
+       http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/2.html. 
+       ¿Qué viste en el navegador? ¿Por qué?  El contenido de la pagina error.html , porque esta configurado
+       si no encuentra la pagina nos muestre el contenido de error.html
+       
+      ![ Captura 06g](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seisg.jpeg)
 
 7. Podemos definir reglas de redirección y agregar metadatos a los objetos en el bucket. 
 
