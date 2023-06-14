@@ -38,12 +38,12 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
     
  4. Crea un directorio llamado páginas web (mkdir webpages) y cd en ese directorio.
     Crea un archivo html simple llamado hello.html con el siguiente contenido.
-      ''' 
+      ```
       <html><body>
        <h1>Amazon S3</h1>
        Hello World!
        </body></html> 
-       '''
+       ```
     Carga el archivo en tu bucket s3 y póngalo a disposición del público con lo siguiente.
     aws s3 cp hello.html s3://tu_nombre_de_usuario --acl public-read
     ¿Cuál es la salida?
@@ -51,19 +51,19 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
     navegador web de tu máquina virtual (u otra9 accede a la URL
     http://s3.amazonaws.com/tu_nombre_de_usuario/hello.html. ¿Qué viste en el navegador?
     
-# Parte 2: alojamiento de sitios web estáticos con S3 h3
+# Parte 2: alojamiento de sitios web estáticos con S3 
 
 6. Podemos usar el bucket como almacenamiento de sitios web estáticos.
    Experimentamos con eso aquí. Crea dos archivos html en el directorio actual
    llamados index.html y error.html. El contenido de los dos archivos se muestra a continuación.
-       ''' 
+       ``` 
        <html><body>
        This is an index page!
        </body></html>
        <html><body>
               Sorry, we can't find that page!
        </body></html> 
-       '''
+       ```
     
   
   
