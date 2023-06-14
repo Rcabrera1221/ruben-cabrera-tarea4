@@ -23,7 +23,19 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
        podemos apreciar que ya se creo el bucket rubencabrera
        
       ![ Captura 02 ](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/dos.PNG)
+
+3. Enumera el contenido del bucket a través del siguiente comando ls.
+
+       aws s3 ls s3://tu_nombre_de_usuario
+
+       ¿Cuál es la salida?
        
+        Utilizando el comando aws s3 ls s3://rubencabrera , 
+        listamos el contenido del bucket rubencabrera, 
+        el mismo que esta vacio.
+        
+        ![ Captura 02 ](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/tres.PNG)
+        
 
     
     
