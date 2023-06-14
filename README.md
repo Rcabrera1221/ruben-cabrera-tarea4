@@ -71,7 +71,47 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
        </body>
        </html> 
        
-    
+El comando sync compara el directorio de origen con tu bucket S3 y carga solo
+archivos nuevos o modificados. Entonces puedes cargar ambos archivos fácilmente
+a través del siguiente comando.
+aws s3 sync ./ s3://tu_nombre_de_usuario/ --acl public-read
+¿Cuál es la salida? Ahora habilitamos el bucket para alojamiento de sitios web
+estáticos con las siguientes instrucciones.
+aws s3 website s3://tu_nombre_de_usuario/
+--index-document index.html
+--error-document error.html
+Observa cómo la instrucción enlaza ambos archivos con sus usos. En el navegador
+web de tu VM, acceda a la URL
+http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/
+¿Qué viste en el navegador? ¿Por qué? Ahora, acceda a
+http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/ hello.html
+¿Qué viste en el navegador? A continuación, acceda a
+http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/2.html. ¿Qué
+viste en el navegador? ¿Por qué?
+
+7. Podemos definir reglas de redirección y agregar metadatos a los objetos en el
+bucket. Ejecuta el siguiente comando para hacerlo. Observa que este comando usa
+s3api, no s3.
+aws s3api put-object --bucket tu_nombre_de_usuario
+--key hello.html
+--website-redirect-location http://www.nku.edu/~haow1 --acl public-read
+--metadata redirection_creator=aws_user
+Ahora http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/hello.html
+¿Qué ves en el navegador? ¿Por qué?.
+8. Para recuperar los metadatos de un objeto, usamos el subcomando head-object.
+Emite la siguiente instrucción.
+aws s3api head-object --bucket tu_nombre_de_usuario --key hello.html
+¿Cuál es la salida?
+
+### Parte 3: Limpieza
+9. Podemos eliminar objetos usando rm. Elimina tu página de índice de la siguiente
+manera.
+aws s3 rm s3://tu_nombre_de_usuario/index.html
+¿Cuál es la salida?
+10. Y podemos quitar el bucket como un todo. Usa lo siguiente.
+aws s3 rb s3://tu_nombre_de_usuario --force
+¿Cuál es la salida? ¿Qué hace --force?
+
   
   
 
