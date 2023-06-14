@@ -187,7 +187,7 @@ aws s3 ls
 
     ¿Cuál es la salida?
     
-    Nos muestra los metadatos del bucket rubencabrera, cuya llave sea hello.html
+    Nos muestra los metadatos de la  llave sea hello.html del bucket rubencabrera.
     
     ![ Captura 08](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ocho.PNG)
     
@@ -195,11 +195,32 @@ aws s3 ls
 ### Parte 3: Limpieza
 9. Podemos eliminar objetos usando rm. Elimina tu página de índice de la siguiente
 manera.
-aws s3 rm s3://tu_nombre_de_usuario/index.html
+    aws s3 rm s3://tu_nombre_de_usuario/index.html
+
 ¿Cuál es la salida?
+
+   ![ Captura 09a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/nuevea.PNG)
+   
+   Colocamos la ruta en el navegador :
+
+    http://rubencabrera.s3-website-us-east-1.amazonaws.com/
+
+    Y nos muestra el mensaje de error ya que la pagina index.html ya no existe   
+     
+   ![ Captura 09b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/nueveb.PNG)
+
 10. Y podemos quitar el bucket como un todo. Usa lo siguiente.
-aws s3 rb s3://tu_nombre_de_usuario --force
-¿Cuál es la salida? ¿Qué hace --force?
+    
+    aws s3 rb s3://tu_nombre_de_usuario --force
+    
+    ¿Cuál es la salida? 
+    
+   ![ Captura 10b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/diez.PNG)
+
+
+    ¿Qué hace --force?
+    
+    Fuerza a borrar todo el contenido del bucket para luego remover el bucket. 
 
   
   
