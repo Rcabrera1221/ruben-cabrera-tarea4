@@ -116,23 +116,35 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
        </body>
        </html> 
        
-El comando sync compara el directorio de origen con tu bucket S3 y carga solo
-archivos nuevos o modificados. Entonces puedes cargar ambos archivos fácilmente
-a través del siguiente comando.
-aws s3 sync ./ s3://tu_nombre_de_usuario/ --acl public-read
-¿Cuál es la salida? Ahora habilitamos el bucket para alojamiento de sitios web
-estáticos con las siguientes instrucciones.
-aws s3 website s3://tu_nombre_de_usuario/
---index-document index.html
---error-document error.html
-Observa cómo la instrucción enlaza ambos archivos con sus usos. En el navegador
-web de tu VM, acceda a la URL
-http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/
-¿Qué viste en el navegador? ¿Por qué? Ahora, acceda a
-http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/ hello.html
-¿Qué viste en el navegador? A continuación, acceda a
-http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/2.html. ¿Qué
-viste en el navegador? ¿Por qué?
+       El comando sync compara el directorio de origen con tu bucket S3 y carga solo
+       archivos nuevos o modificados. 
+       Entonces puedes cargar ambos archivos fácilmente a través del siguiente comando.
+              aws s3 sync ./ s3://tu_nombre_de_usuario/ --acl public-read
+
+       ¿Cuál es la salida? 
+       
+       
+       Primero construimos las paginas index.html y error.html
+       
+       ![ Captura 06a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seisa.PNG)
+       
+       Ahora habilitamos el bucket para alojamiento de sitios web estáticos con las siguientes instrucciones.
+       aws s3 website s3://tu_nombre_de_usuario/ --index-document index.html --error-document error.html
+
+       Observa cómo la instrucción enlaza ambos archivos con sus usos. 
+       
+       ![ Captura 06b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seisb.PNG)
+       
+       En el navegador web de tu VM, acceda a la URL
+
+       http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/
+       ¿Qué viste en el navegador? ¿Por qué? Ahora, acceda a
+       
+       http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/ hello.html
+       ¿Qué viste en el navegador? A continuación, acceda a
+
+       http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/2.html. ¿Qué
+       viste en el navegador? ¿Por qué?
 
 7. Podemos definir reglas de redirección y agregar metadatos a los objetos en el
 bucket. Ejecuta el siguiente comando para hacerlo. Observa que este comando usa
