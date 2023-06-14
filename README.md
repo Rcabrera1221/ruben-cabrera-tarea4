@@ -163,15 +163,29 @@ aws s3 ls
        http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/2.html. ¿Qué
        viste en el navegador? ¿Por qué?
 
-7. Podemos definir reglas de redirección y agregar metadatos a los objetos en el
-bucket. Ejecuta el siguiente comando para hacerlo. Observa que este comando usa
-s3api, no s3.
-aws s3api put-object --bucket tu_nombre_de_usuario
---key hello.html
---website-redirect-location http://www.nku.edu/~haow1 --acl public-read
---metadata redirection_creator=aws_user
-Ahora http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/hello.html
-¿Qué ves en el navegador? ¿Por qué?.
+7. Podemos definir reglas de redirección y agregar metadatos a los objetos en el bucket. 
+
+    Ejecuta el siguiente comando para hacerlo. Observa que este comando usa s3api, no s3.
+    
+    aws s3api put-object --bucket tu_nombre_de_usuario --key hello.html --website-redirect-location http://www.nku.edu/~haow1 --acl public-read
+    --metadata redirection_creator=aws_user
+
+    Ahora http://tu_nombre_de_usuario.s3-website-us-east-1.amazonaws.com/hello.html
+    
+    ¿Qué ves en el navegador? ¿Por qué?.
+    
+    Se puede visualizar un redireccionamiento hacia la pagina http://www.nku.edu/~haow1 , ya que en el comando ingresado se le indica que
+    cuando invoque a hello.html realice dicho redireccionamiento.
+    
+    
+   ![ Captura 07a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/sietea.PNG)
+     
+   ![ Captura 07b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/sieteb.PNG)
+    
+    
+    
+    
+    
 8. Para recuperar los metadatos de un objeto, usamos el subcomando head-object.
 Emite la siguiente instrucción.
 aws s3api head-object --bucket tu_nombre_de_usuario --key hello.html
