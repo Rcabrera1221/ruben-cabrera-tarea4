@@ -34,7 +34,7 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
         listamos el contenido del bucket rubencabrera, 
         el mismo que esta vacio.
         
-      ![ Captura 013](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/tres.PNG)  
+      ![ Captura 03](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/tres.PNG)  
     
  4. Crea un directorio llamado páginas web (mkdir webpages) y cd en ese directorio.
     Crea un archivo html simple llamado hello.html con el siguiente contenido.
@@ -67,7 +67,11 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
        lo siguiente: 
        
        
+       ![ Captura 04a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/cuatroa.PNG) 
        
+       ![ Captura 04b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/cuatrob.PNG) 
+       
+       ![ Captura 04c](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/cuatroc.PNG) 
        
        
        
