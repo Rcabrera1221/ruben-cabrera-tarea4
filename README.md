@@ -59,7 +59,6 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
    Experimentamos con eso aquí. Crea dos archivos html en el directorio actual
    llamados index.html y error.html. El contenido de los dos archivos se muestra a continuación.
        
-       ``` 
        <html>
        <body>
               This is an index page!
@@ -71,7 +70,7 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
               Sorry, we can't find that page!
        </body>
        </html> 
-       ```
+       
     
   
   
