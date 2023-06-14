@@ -126,14 +126,14 @@ aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
        
        Primero construimos las paginas index.html y error.html
        
-       ![ Captura 06a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seisa.PNG)
+      ![ Captura 06a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seisa.PNG)
        
        Ahora habilitamos el bucket para alojamiento de sitios web estáticos con las siguientes instrucciones.
        aws s3 website s3://tu_nombre_de_usuario/ --index-document index.html --error-document error.html
 
        Observa cómo la instrucción enlaza ambos archivos con sus usos. 
        
-       ![ Captura 06b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seisb.PNG)
+      ![ Captura 06b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/seisb.PNG)
        
        En el navegador web de tu VM, acceda a la URL
 
