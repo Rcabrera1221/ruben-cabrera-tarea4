@@ -181,15 +181,16 @@ aws s3 ls
    ![ Captura 07a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/sietea.PNG)
      
    ![ Captura 07b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/sieteb.PNG)
+   
+8. Para recuperar los metadatos de un objeto, usamos el subcomando head-object. Emite la siguiente instrucción.
+    aws s3api head-object --bucket tu_nombre_de_usuario --key hello.html
+
+    ¿Cuál es la salida?
     
+    Nos muestra los metadatos del bucket rubencabrera, cuya llave sea hello.html
     
+    ![ Captura 08](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ocho.PNG)
     
-    
-    
-8. Para recuperar los metadatos de un objeto, usamos el subcomando head-object.
-Emite la siguiente instrucción.
-aws s3api head-object --bucket tu_nombre_de_usuario --key hello.html
-¿Cuál es la salida?
 
 ### Parte 3: Limpieza
 9. Podemos eliminar objetos usando rm. Elimina tu página de índice de la siguiente
