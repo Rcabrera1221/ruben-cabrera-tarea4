@@ -130,7 +130,7 @@
         ¿Cuál es el resultado del comando describe-snapshot? Continúa repitiendo este comando hasta que vea que el estado
         de la instantánea cambia a "completado", lo que significa que se ha realizado una copia de seguridad del volumen.
 
-        ![Captura EBS-05c](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_05c.PNG)
+   ![Captura EBS-05c](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_05c.PNG)
 
     6. Dada una instantánea, podemos usarla para crear un nuevo volumen. Ejecuta el siguiente comando.
        Utiliza el ID de instantánea del paso 5.
