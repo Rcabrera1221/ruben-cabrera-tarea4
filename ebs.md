@@ -48,6 +48,11 @@
        aws ec2 attach-volume --volume-id volume_id --instance-id id_instance --device /dev/sdf
 
     ¿Cuál es la salida?
+
+     Nos permitió asignar el volumen a la instancia
+
+  ![Captura EBS-03](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_03.PNG)
+
     
 4. Inicia sesión en la instancia EC2 a través de ssh. En tu instancia EC2, cambie a root.
         Ahora queremos crear un sistema de archivos en el volumen de EBS (el volumen de EBS es básicamente
