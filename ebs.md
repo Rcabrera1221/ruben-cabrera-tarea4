@@ -51,7 +51,7 @@
 
      Nos permitió asignar el volumen a la instancia
 
-  ![Captura EBS-03](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_03.PNG)
+  ![Captura EBS-03b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_03b.PNG)
 
     
 4. Inicia sesión en la instancia EC2 a través de ssh. En tu instancia EC2, cambie a root.
