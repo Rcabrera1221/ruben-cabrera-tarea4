@@ -156,6 +156,11 @@
             aws ec2 attach-volumen --volume-id volume_id --instance-id instance_id --device /dev/sdg
 
             ¿Cuál es la salida?
+
+   ![Captura EBS-07](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_07.PNG)
+
+            La salida indica que el volumen vol-0fdde75b1adad8375 está en proceso de ser adjuntado a la instancia 
+            i-0eafbca1d2552e94c
        
     8. Vuelve a la ventana de la terminal en la que se tiene ssh en tu instancia EC2. Desde ese terminal, crea un punto 
        de montaje llamado /data2 y monte el nuevo volumen allí.
