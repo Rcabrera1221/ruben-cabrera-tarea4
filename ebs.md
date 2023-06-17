@@ -189,9 +189,28 @@
 
            ¿Cuáles son las salidas? Repite estos dos comandos para el segundo volumen, cuyo volume_id deberías haber obtenido 
            del paso 6.
+
+   
+   ![Captura EBS-09a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_09a.PNG)
+
+           La ejecución de nuestro comando es exitoso, por ello no vamos a obtener una salida explícita
+ 
+   
+   ![Captura EBS-09b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_09b.PNG)
+           
            
            ¿Qué comandos usastes?
+
+   ![Captura EBS-09c](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_09c.PNG)
+
+   ![Captura EBS-09d](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_09d.PNG)
+           
+           
            ¿Cuáles son las salidas?
+         
+         La salida indica que el volumen vol-0fdde75b1adad8375 está en proceso de ser desmontado de la instancia i-0eafbca1d2552e94c.
+
+           
 
        
    10. Elimina la instantánea con lo siguiente usando su snapshot_id del paso 5.
