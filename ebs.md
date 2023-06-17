@@ -116,61 +116,75 @@
        ¿Qué comandos se ejecutó para lograr ambas tareas? Cambia el directorio de su instancia EC2 a /data2.
        ¿Viste el archivo aws_user.txt?
 
-    9. Ahora queremos desmontar nuestros volúmenes, para lo cual usamos el comando umount. Luego separaremos los volúmenes de la instancia EC2
-       y los destruiremos.
-       Los siguientes son los comandos a ejecutar. Ten en cuenta que los primeros tres comandos están en su instancia EC2 y el resto está en tu VM.
+    9. Ahora queremos desmontar nuestros volúmenes, para lo cual usamos el comando umount. Luego separaremos los volúmenes 
+       de la instancia EC2 y los destruiremos.
+       Los siguientes son los comandos a ejecutar. Ten en cuenta que los primeros tres comandos están en su instancia EC2 
+       y el resto está en tu VM.
+       
             root@ip-10-45-185-154:/data3# cd /
             root@ip-10-45-185-154:/# unmount /dev/xvdf
             root@ip-10-45-185-154:/# unmount /dev/xvdg
 
-       Ahora desconecta y elimina el primer volumen, cuyo volume_id obtuvo en el paso 1.
-       Espera unos 10 segundos después de desconectar antes de intentar eliminar.
+       Ahora desconecta y elimina el primer volumen, cuyo volume_id obtuvo en el paso 1. Espera unos 10 segundos después 
+       de desconectar antes de intentar eliminar.
+       
            aws ec2 detach-volume --volume-id volume_id
             aws ec2 delete-volume --volume-id volume_id
 
-           ¿Cuáles son las salidas? Repite estos dos comandos para el segundo volumen, cuyo volume_id deberías haber obtenido del paso 6.
+           ¿Cuáles son las salidas? Repite estos dos comandos para el segundo volumen, cuyo volume_id deberías haber obtenido 
+           del paso 6.
+           
            ¿Qué comandos usastes?
            ¿Cuáles son las salidas?
 
        
-10. Elimina la instantánea con lo siguiente usando su snapshot_id del paso 5.
-aws ec2 delete-snapshot --snapshot-id snapshot_id.}
-11. Cambie a la terminal. De lo que aprendiste en la parte 1, crea dos volúmenes de 1
-GB en la zona de disponibilidad us-east-1c. ¿Qué comandos ejecutaste? ¿Cuáles
-son las salidas? Adjunta ambos volúmenes a tu instancia EC2, haciendo que
-aparezcan como /dev/sdh1 y /dev/sdh2, respectivamente. ¿Qué comandos
-ejecutaste? ¿Cuáles son las salidas?
-12. Cambia al terminal de la instancia EC2. Usaremos el programa mdadm de Linux
-para configurar los volúmenes en una configuración RAID. Instala mdadm de la
-siguiente manera.
-apt-get update
+   10. Elimina la instantánea con lo siguiente usando su snapshot_id del paso 5.
 
-    
-    apt-get install mdadm
-Escribe "y" y presiona enter cuando se te solicite, seleccione "No configuration"
-cuando se te solicite y presiona enter. Ahora ejecutamos mdadm para crear un
-arreglo RAID 0 en los dos volúmenes. Ejecuta lo siguiente. Donde vea
-"renamed_/dev/sdh1" y "renamed_/dev/shd2", usa los nombres que se te
-proporcionó AWS en el paso 11.
-mdadm --create /dev/md0 --level 0 --metadata=1.1
---raid-devices 2 renamed_/dev/sdh1 renamed_/dev/sdh2
-¿Cuál es la salida?
-13. Ahora, podemos comprobar el estado de la matriz RAID 0. Emite lo siguiente.
-mdadm --detail /dev/md0
-¿Cuál es la salida? Tenemos que agregar un sistema de archivos al arreglo RAID 0.
-Entonces queremos montarlo. Haz lo siguiente.
-mkfs /dev/md0
-mkdir /data3
-mount /dev/md0 /data3
-El comando df de Linux muestra información sobre los sistemas de archivos
-montados. ¿Cuál es la salida?
-14. Finalizamos este laboratorio deteniendo el arreglo RAID 0, separando y eliminando
-ambos volúmenes de EBS y luego finalizando la instancia EC2. Para detener el
-arreglo RAID 0, haz lo siguiente desde su instancia EC2.
-cd /
-unmount /dev/md0
-mdadm --stop /dev/md0
-Ahora, cambia a tu terminal. Separa y elimina ambos volúmenes de EBS. ¿Qué
-comandos ejecutaste? ¿Cuáles son las salidas? Finaliza tu instancia EC2. ¿Qué
-comando ejecutaste? ¿Cuál es la salida?
+       aws ec2 delete-snapshot --snapshot-id snapshot_id.}
+
+  11. Cambie a la terminal. De lo que aprendiste en la parte 1, crea dos volúmenes de 1GB en la zona de disponibilidad us-east-1c.
+
+      ¿Qué comandos ejecutaste? ¿Cuáles son las salidas? Adjunta ambos volúmenes a tu instancia EC2, haciendo que aparezcan como
+      /dev/sdh1 y /dev/sdh2, respectivamente.
+
+      ¿Qué comandos ejecutaste? ¿Cuáles son las salidas?
+
+  12. Cambia al terminal de la instancia EC2. Usaremos el programa mdadm de Linux para configurar los volúmenes en una configuración
+      RAID. Instala mdadm de la siguiente manera.
+         apt-get update
+         apt-get install mdadm
+
+      Escribe "y" y presiona enter cuando se te solicite, seleccione "No configuration"
+
+      Cuando se te solicite y presiona enter. Ahora ejecutamos mdadm para crear un arreglo RAID 0 en los dos volúmenes.
+
+      Ejecuta lo siguiente. Donde vea "renamed_/dev/sdh1" y "renamed_/dev/shd2", usa los nombres que se te proporcionó AWS en el paso 11.
+
+       mdadm --create /dev/md0 --level 0 --metadata=1.1
+      --raid-devices 2 renamed_/dev/sdh1 renamed_/dev/sdh2
+      ¿Cuál es la salida?
+      
+  13. Ahora, podemos comprobar el estado de la matriz RAID 0. Emite lo siguiente.
+
+        mdadm --detail /dev/md0
+      
+      ¿Cuál es la salida? Tenemos que agregar un sistema de archivos al arreglo RAID 0.
+      Entonces queremos montarlo. Haz lo siguiente.
+        mkfs /dev/md0
+        mkdir /data3
+        mount /dev/md0 /data3
+
+      El comando df de Linux muestra información sobre los sistemas de archivos montados.
+
+      ¿Cuál es la salida?
+      
+ 14. Finalizamos este laboratorio deteniendo el arreglo RAID 0, separando y eliminando ambos volúmenes de EBS y luego finalizando
+     la instancia EC2. Para detener el arreglo RAID 0, haz lo siguiente desde su instancia EC2.
+        cd /
+        unmount /dev/md0
+        mdadm --stop /dev/md0
+
+     Ahora, cambia a tu terminal. Separa y elimina ambos volúmenes de EBS. ¿Qué comandos ejecutaste? ¿Cuáles son las salidas?
+
+     Finaliza tu instancia EC2. ¿Qué comando ejecutaste? ¿Cuál es la salida?
 
