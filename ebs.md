@@ -56,9 +56,9 @@
         el kernel podría cambiar el nombre de tu dispositivo a /dev/xvdf, en la mayoría de los casos, la letra final sigue 
         siendo la misma. 
 
-        Ejecuta lsblk en tu terminal para ver tus dispositivos de disco disponibles y tus puntos de montaje (si corresponde) 
-        para ayudarte a determinar el nombre de dispositivo correcto que debe usar. Suponga que el kernel cambia el nombre 
-        del dispositivo a /dev/xvdf.
+        Ejecuta lsblk en tu terminal para ver tus dispositivos de disco disponibles y tus puntos de montaje
+        (si corresponde) para ayudarte a determinar el nombre de dispositivo correcto que debe usar.
+        Suponga que el kernel cambia el nombre del dispositivo a /dev/xvdf.
 
         mkfs -F /dev/xvdf
 
