@@ -37,8 +37,11 @@
 
 3. Para crear una instancia de EBS, hazlo siguiente.
     aws ec2 run-instances --image-id ami-d9a98cb0 --count 1 –instance-type t1.micro –key-name
-    tu_nombre_de_usuario-key --security-groups tu_nombre_de_usuario
-    --placement AvailabilityZone=us-east-1c
+    tu_nombre_de_usuario-key --security-groups tu_nombre_de_usuario --placement AvailabilityZone=us-east-1c
+
+
+
+  ![Captura EBS-03](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_03.PNG)
 
     Ahora, adjunta el volumen de EBS a la instancia. Esto lo colocas en el directorio /dev/sdf en tu instancia EC2.
 
@@ -46,7 +49,7 @@
 
     ¿Cuál es la salida?
     
-4. Inicia sesión en la instancia EC2 a través de ssh. En tu instancia EC2, cambie a root.
+5. Inicia sesión en la instancia EC2 a través de ssh. En tu instancia EC2, cambie a root.
         Ahora queremos crear un sistema de archivos en el volumen de EBS (el volumen de EBS es básicamente
         un dispositivo de almacenamiento en blanco). Luego necesitamos montar el volumen para que sea accesible.
         Utiliza los siguientes comandos desde tu EC2.
