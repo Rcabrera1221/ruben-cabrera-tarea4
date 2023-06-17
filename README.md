@@ -276,28 +276,33 @@ aws ec2 attach-volume --volume-id volume_id --instance-id
 id_instance --device /dev/sdf
 ¿Cuál es la salida?
 4. Inicia sesión en la instancia EC2 a través de ssh. En tu instancia EC2, cambie a root.
-Ahora queremos crear un sistema de archivos en el volumen de EBS (el volumen de
-EBS es básicamente un dispositivo de almacenamiento en blanco). Luego
+Ahora queremos crear un sistema de archivos en el volumen de EBS (el volumen de EBS es básicamente
+un dispositivo de almacenamiento en blanco). Luego necesitamos montar el volumen para que sea accesible.
+Utiliza los siguientes comandos desde tu EC2.
 
-necesitamos montar el volumen para que sea accesible. Utiliza los siguientes
-comandos desde tu EC2. Ten en cuenta que, según el controlador del dispositivo de
-bloque del kernel, el dispositivo puede estar conectado con un nombre diferente al
-que ha especificado. Por ejemplo, si especificas un nombre de dispositivo de
-/dev/sdf, el kernel podría cambiar el nombre de tu dispositivo a /dev/xvdf, en la
-mayoría de los casos, la letra final sigue siendo la misma. Ejecuta lsblk en tu
-terminal para ver tus dispositivos de disco disponibles y tus puntos de montaje (si
-corresponde) para ayudarte a determinar el nombre de dispositivo correcto que debe
-usar. Suponga que el kernel cambia el nombre del dispositivo a /dev/xvdf.
+Ten en cuenta que, según el controlador del dispositivo de bloque del kernel, el dispositivo puede estar conectado 
+con un nombre diferente al que ha especificado. Por ejemplo, si especificas un nombre de dispositivo de /dev/sdf, 
+el kernel podría cambiar el nombre de tu dispositivo a /dev/xvdf, en la mayoría de los casos, la letra final sigue 
+siendo la misma. 
+
+Ejecuta lsblk en tu terminal para ver tus dispositivos de disco disponibles y tus puntos de montaje (si corresponde) 
+para ayudarte a determinar el nombre de dispositivo correcto que debe usar. Suponga que el kernel cambia el nombre 
+del dispositivo a /dev/xvdf.
+
 mkfs -F /dev/xvdf
+
 ¿Cuál es la salida?
+
 mkdir /data
 mount /dev/xvdf /data
 cd /data/
 df
+
 ¿Cuál es la salida?
 
 
-Parte 2. Instantáneas de EBS
+### Parte 2. Instantáneas de EBS
+
 5. Crea un archivo llamado aws_user.txt y escribe lo que desees en el archivo. Ahora,
 veremos cómo crear una copia de seguridad de todo tu volumen de EBS. El primer
 paso es asegurarte de que todos los datos en memoria se hayan escrito en el
