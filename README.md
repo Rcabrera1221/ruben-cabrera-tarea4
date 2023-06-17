@@ -251,8 +251,22 @@ manera.
 
       
       ![Captura EBS-01](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_01.PNG)
-      
 
+
+
+    2. Utiliza el siguiente comando para ver la información de tu volumen de EBS donde se te proporcionó volume_id 
+        en el resultado del comando anterior.
+        
+        aws ec2 describe-volume-status --volume-ids volume_id
+
+        ¿Cuál es la salida?
+
+        Nos brinda el información detallada del volumen 
+        
+        "VolumeId": "vol-0e8c21be5c65f253b"
+        
+        ![Captura EBS-02](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_02.PNG)
+        
 
 
     
