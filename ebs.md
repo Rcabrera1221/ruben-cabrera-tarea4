@@ -137,8 +137,18 @@
 
             aws ec2 create-volume --región us-east-1 --availability-zone us-east-1c --snapshot-id snapshot_id
 
-        ¿Cuál es la salida? Comprueba el estado del volumen. ¿Qué comando ejecutaste para verificar el estado? 
-        ¿Cuál es la salida?
+        ¿Cuál es la salida? Comprueba el estado del volumen. 
+
+  ![Captura EBS-06a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_06a.PNG)
+
+         Se crea el volumen vol-0963daa01f001fc0b en la zona us-east-1c
+        
+        ¿Qué comando ejecutaste para verificar el estado? ¿Cuál es la salida?       
+   
+   ![Captura EBS-06b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_06b.PNG)
+
+         La salida indica que el volumen vol-0963daa01f001fc0b está en buen estado
+  
        
     7. Repite el comando de adjuntar volumen del paso 3 para adjuntar este nuevo volumen. El ID de volumen será el que se
        devolvió al obtener el estado 6, mientras que el ID de instancia es el de tu instancia EC2 que obtuvo en el paso 3.
