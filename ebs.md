@@ -69,11 +69,21 @@
 
         Ejecuta lsblk en tu terminal para ver tus dispositivos de disco disponibles y tus puntos de montaje
         (si corresponde) para ayudarte a determinar el nombre de dispositivo correcto que debe usar.
+
+
+![Captura EBS-04b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_04b.PNG)
+        
         Suponga que el kernel cambia el nombre del dispositivo a /dev/xvdf.
 
         mkfs -F /dev/xvdf
 
         ¿Cuál es la salida?
+        
+        En este caso la salida es la creación de un nuevo sistema de archivos en el dispositivo /dev/xvdf y 
+        los mensajes ´´Allocating group tables: done´´, Writing inode tables: done´´, Writing superblocks 
+        and filesystem accounting information: done´´, nos indican que el proceso de creación del sistema 
+        de archivos se ha completado sin errores y de manera satisfactoria.
+        
 
         mkdir /data
         mount /dev/xvdf /data
@@ -81,6 +91,9 @@
         df
 
         ¿Cuál es la salida?
+
+ ![Captura EBS-04c](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_04c.PNG)
+
 
 ### Parte 2. Instantáneas de EBS
 
