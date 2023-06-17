@@ -265,7 +265,8 @@ manera.
         
         "VolumeId": "vol-0e8c21be5c65f253b"
         
-       ![Captura EBS-02](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_02.PNG)
+
+![Captura EBS-02](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_02.PNG)
         
 
 
