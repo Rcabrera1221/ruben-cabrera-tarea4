@@ -208,7 +208,8 @@
            
            ¿Cuáles son las salidas?
          
-         La salida indica que el volumen vol-0fdde75b1adad8375 está en proceso de ser desmontado de la instancia i-0eafbca1d2552e94c.
+         La salida indica que el volumen vol-0fdde75b1adad8375 está en proceso de ser desmontado de la instancia 
+         i-0eafbca1d2552e94c.
 
            
 
