@@ -250,7 +250,7 @@ manera.
       Nos muestra la información del volumen creado
 
       
-     ![ Captura EBS-01](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_01.PNG)
+      ![Captura EBS-01](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_01.PNG)
       
 
 
