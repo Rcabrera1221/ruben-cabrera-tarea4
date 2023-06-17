@@ -254,7 +254,7 @@ manera.
 
 
 
-    2. Utiliza el siguiente comando para ver la información de tu volumen de EBS donde se te proporcionó volume_id 
+2. Utiliza el siguiente comando para ver la información de tu volumen de EBS donde se te proporcionó volume_id 
         en el resultado del comando anterior.
         
         aws ec2 describe-volume-status --volume-ids volume_id
