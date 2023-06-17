@@ -98,12 +98,15 @@
 ### Parte 2. Instantáneas de EBS
 
     5. Crea un archivo llamado aws_user.txt y escribe lo que desees en el archivo. Ahora, veremos cómo crear una copia 
-       de seguridad de todo tu volumen de EBS.
-       El primer paso es asegurarte de que todos los datos en memoria se hayan escrito en el volumen (disco), ya que es 
-       posible que        el archivo creado aún no se haya guardado en el disco. Para forzar que esto suceda, usamos el 
-       comando sync (sincronización).
-    
-       En la ventana de tu terminal para su instancia EC2, ejecuta las siguientes instrucciones.
+       de seguridad de todo tu volumen de EBS. El primer paso es asegurarte de que todos los datos en memoria se hayan 
+       escrito en el volumen (disco), ya que es posible que el archivo creado aún no se haya guardado en el disco. 
+ 
+ 
+   ![Captura EBS-05a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_05a.PNG)
+       
+       
+       Para forzar que esto suceda, usamos el comando sync (sincronización). En la ventana de tu terminal para su 
+       instancia EC2, ejecuta las siguientes instrucciones.
 
            root@ip-10-45-185-154:/data# sync
 
@@ -113,13 +116,21 @@
 
        donde volume_id es el id obtenido del paso 1.
 
-       ¿Cuál es el resultado? Puedes verificar el estado de tu instantánea usando las siguientes instrucciones.
+       ¿Cuál es el resultado? 
+   
+   ![Captura EBS-05b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_05b.PNG)
+       
+       Puedes verificar el estado de tu instantánea usando las siguientes instrucciones.
 
                aws ec2 describe-snapshots --snapshot-id snapshot_id
 
+        
+        
         El snapshot_id debe ser parte de la salida de la instrucción de creación de instantáneas que acaba de ejecutar.
         ¿Cuál es el resultado del comando describe-snapshot? Continúa repitiendo este comando hasta que vea que el estado
         de la instantánea cambia a "completado", lo que significa que se ha realizado una copia de seguridad del volumen.
+
+        ![Captura EBS-05c](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_05c.PNG)
 
     6. Dada una instantánea, podemos usarla para crear un nuevo volumen. Ejecuta el siguiente comando.
        Utiliza el ID de instantánea del paso 5.
