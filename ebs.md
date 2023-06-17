@@ -49,7 +49,7 @@
 
     ¿Cuál es la salida?
     
-5. Inicia sesión en la instancia EC2 a través de ssh. En tu instancia EC2, cambie a root.
+4. Inicia sesión en la instancia EC2 a través de ssh. En tu instancia EC2, cambie a root.
         Ahora queremos crear un sistema de archivos en el volumen de EBS (el volumen de EBS es básicamente
         un dispositivo de almacenamiento en blanco). Luego necesitamos montar el volumen para que sea accesible.
         Utiliza los siguientes comandos desde tu EC2.
