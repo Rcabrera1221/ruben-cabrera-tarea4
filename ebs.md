@@ -71,8 +71,7 @@
 
         ¿Cuál es la salida?
 
-
-    ### Parte 2. Instantáneas de EBS
+### Parte 2. Instantáneas de EBS
 
     5. Crea un archivo llamado aws_user.txt y escribe lo que desees en el archivo. Ahora, veremos cómo crear una copia de seguridad
        de todo tu volumen de EBS.
