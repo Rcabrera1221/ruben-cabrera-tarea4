@@ -167,6 +167,11 @@
        ¿Qué comandos se ejecutó para lograr ambas tareas? Cambia el directorio de su instancia EC2 a /data2.
        ¿Viste el archivo aws_user.txt?
 
+   ![Captura EBS-08a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_08a.PNG)
+   
+   ![Captura EBS-08b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_08b.PNG)
+       
+
     9. Ahora queremos desmontar nuestros volúmenes, para lo cual usamos el comando umount. Luego separaremos los volúmenes 
        de la instancia EC2 y los destruiremos.
        Los siguientes son los comandos a ejecutar. Ten en cuenta que los primeros tres comandos están en su instancia EC2 
