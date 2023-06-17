@@ -229,8 +229,30 @@ manera.
     
     Fuerza a borrar todo el contenido del bucket para luego remover el bucket. 
 
-  
-  
+
+  ## EBS
+
+    En este laboratorio, se utilizará la CLI de AWS para crear un volumen y una instantánea de Amazon EBS 
+    y configurar tu almacenamiento de EBS como un arreglo RAID.
+
+  ### Parte 1. Crea un nuevo volumen de EBS
+   
+   1. Inicia sesión en el sandbox del curso. Crea un nuevo volumen de EBS con el siguiente comando.
+
+      aws ec2 create-volume --size 1 --region us-east-1 --availability-zone us-east-1c
+
+      ¿Qué significa este comando?
+
+      Este comando va crear un volumen en la región us-east-1 habilitado en la zona us-east-1c de tamaño 1
+
+      ¿Cuál es la salida?
+
+      Nos muestra la información del volumen creado
+
+      
+     ![ Captura EBS-01](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_01.PNG)
+      
+
 
 
     
