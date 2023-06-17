@@ -59,6 +59,9 @@
         un dispositivo de almacenamiento en blanco). Luego necesitamos montar el volumen para que sea accesible.
         Utiliza los siguientes comandos desde tu EC2.
 
+  ![Captura EBS-04a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_04a.PNG)
+
+
         Ten en cuenta que, según el controlador del dispositivo de bloque del kernel, el dispositivo puede estar conectado 
         con un nombre diferente al que ha especificado. Por ejemplo, si especificas un nombre de dispositivo de /dev/sdf, 
         el kernel podría cambiar el nombre de tu dispositivo a /dev/xvdf, en la mayoría de los casos, la letra final sigue 
