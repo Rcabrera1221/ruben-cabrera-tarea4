@@ -73,10 +73,11 @@
 
 ### Parte 2. Instantáneas de EBS
 
-    5. Crea un archivo llamado aws_user.txt y escribe lo que desees en el archivo. Ahora, veremos cómo crear una copia de seguridad
-       de todo tu volumen de EBS.
-       El primer paso es asegurarte de que todos los datos en memoria se hayan escrito en el volumen (disco), ya que es posible que
-       el archivo creado aún no se haya guardado en el disco. Para forzar que esto suceda, usamos el comando sync (sincronización).
+    5. Crea un archivo llamado aws_user.txt y escribe lo que desees en el archivo. Ahora, veremos cómo crear una copia 
+       de seguridad de todo tu volumen de EBS.
+       El primer paso es asegurarte de que todos los datos en memoria se hayan escrito en el volumen (disco), ya que es 
+       posible que        el archivo creado aún no se haya guardado en el disco. Para forzar que esto suceda, usamos el 
+       comando sync (sincronización).
     
        En la ventana de tu terminal para su instancia EC2, ejecuta las siguientes instrucciones.
 
@@ -111,8 +112,8 @@
 
             ¿Cuál es la salida?
        
-    8. Vuelve a la ventana de la terminal en la que se tiene ssh en tu instancia EC2. Desde ese terminal, crea un punto de montaje
-       llamado /data2 y monte el nuevo volumen allí.
+    8. Vuelve a la ventana de la terminal en la que se tiene ssh en tu instancia EC2. Desde ese terminal, crea un punto 
+       de montaje llamado /data2 y monte el nuevo volumen allí.
        ¿Qué comandos se ejecutó para lograr ambas tareas? Cambia el directorio de su instancia EC2 a /data2.
        ¿Viste el archivo aws_user.txt?
 
