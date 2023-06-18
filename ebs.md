@@ -209,23 +209,22 @@
            ¿Cuáles son las salidas?
          
          La salida indica que el volumen vol-0fdde75b1adad8375 está en proceso de ser desmontado de la instancia 
-         i-0eafbca1d2552e94c.
-
-           
-
+         i-0eafbca1d2552e94c.          
        
    10. Elimina la instantánea con lo siguiente usando su snapshot_id del paso 5.
 
-       aws ec2 delete-snapshot --snapshot-id snapshot_id.}
+       aws ec2 delete-snapshot --snapshot-id snapshot_id.
 
-  11. Cambie a la terminal. De lo que aprendiste en la parte 1, crea dos volúmenes de 1GB en la zona de disponibilidad us-east-1c.
+       ![Captura EBS-10](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_10.PNG)
+
+  12. Cambie a la terminal. De lo que aprendiste en la parte 1, crea dos volúmenes de 1GB en la zona de disponibilidad us-east-1c.
 
       ¿Qué comandos ejecutaste? ¿Cuáles son las salidas? Adjunta ambos volúmenes a tu instancia EC2, haciendo que aparezcan como
       /dev/sdh1 y /dev/sdh2, respectivamente.
 
       ¿Qué comandos ejecutaste? ¿Cuáles son las salidas?
 
-  12. Cambia al terminal de la instancia EC2. Usaremos el programa mdadm de Linux para configurar los volúmenes en una configuración
+  13. Cambia al terminal de la instancia EC2. Usaremos el programa mdadm de Linux para configurar los volúmenes en una configuración
       RAID. Instala mdadm de la siguiente manera.
          apt-get update
          apt-get install mdadm
@@ -240,7 +239,7 @@
       --raid-devices 2 renamed_/dev/sdh1 renamed_/dev/sdh2
       ¿Cuál es la salida?
       
-  13. Ahora, podemos comprobar el estado de la matriz RAID 0. Emite lo siguiente.
+  14. Ahora, podemos comprobar el estado de la matriz RAID 0. Emite lo siguiente.
 
         mdadm --detail /dev/md0
       
@@ -254,7 +253,7 @@
 
       ¿Cuál es la salida?
       
- 14. Finalizamos este laboratorio deteniendo el arreglo RAID 0, separando y eliminando ambos volúmenes de EBS y luego finalizando
+ 15. Finalizamos este laboratorio deteniendo el arreglo RAID 0, separando y eliminando ambos volúmenes de EBS y luego finalizando
      la instancia EC2. Para detener el arreglo RAID 0, haz lo siguiente desde su instancia EC2.
         cd /
         unmount /dev/md0
