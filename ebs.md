@@ -280,19 +280,31 @@
       
 
       
-  14. Ahora, podemos comprobar el estado de la matriz RAID 0. Emite lo siguiente.
+  13. Ahora, podemos comprobar el estado de la matriz RAID 0. Emite lo siguiente.
 
         mdadm --detail /dev/md0
       
-      ¿Cuál es la salida? Tenemos que agregar un sistema de archivos al arreglo RAID 0.
+      ¿Cuál es la salida?
+      
+      La salida proporciona una visión detallada del estado y la configuración del arreglo
+      RAID /dev/md0.
+  
+  ![Captura EBS-13a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_13a.PNG)
+
+      Tenemos que agregar un sistema de archivos al arreglo RAID 0.
       Entonces queremos montarlo. Haz lo siguiente.
         mkfs /dev/md0
         mkdir /data3
         mount /dev/md0 /data3
 
+   ![Captura EBS-13b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_13b.PNG)
+
       El comando df de Linux muestra información sobre los sistemas de archivos montados.
 
       ¿Cuál es la salida?
+      
+   ![Captura EBS-13c](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_13c.PNG)
+      
       
  15. Finalizamos este laboratorio deteniendo el arreglo RAID 0, separando y eliminando ambos volúmenes de EBS y luego finalizando
      la instancia EC2. Para detener el arreglo RAID 0, haz lo siguiente desde su instancia EC2.
