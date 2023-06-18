@@ -306,13 +306,33 @@
    ![Captura EBS-13c](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_13c.PNG)
       
       
- 15. Finalizamos este laboratorio deteniendo el arreglo RAID 0, separando y eliminando ambos volúmenes de EBS y luego finalizando
+ 14. Finalizamos este laboratorio deteniendo el arreglo RAID 0, separando y eliminando ambos volúmenes de EBS y luego finalizando
      la instancia EC2. Para detener el arreglo RAID 0, haz lo siguiente desde su instancia EC2.
         cd /
         unmount /dev/md0
         mdadm --stop /dev/md0
 
-     Ahora, cambia a tu terminal. Separa y elimina ambos volúmenes de EBS. ¿Qué comandos ejecutaste? ¿Cuáles son las salidas?
+  ![Captura EBS-14a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_14a.PNG)
+
+     Ahora, cambia a tu terminal. Separa y elimina ambos volúmenes de EBS. 
+     ¿Qué comandos ejecutaste? ¿Cuáles son las salidas?
+
+      Primer volúmen:
+      La salida del comando aws ec2 detach volume --volume-id vol-0407080127c611204 muestra que se está realizando una acción para
+      separar(detach) el volumen con ID vol-0407080127c611204 de la instancia i-0eafbca1d2552e94c
+
+![Captura EBS-14b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_14b.PNG)
+
+      Segundo volúmen:
+      La salida del comando aws ec2 detach volume --volume-id vol-0e27b5ed70afb0339 muestra que se está realizando una acción
+      para separar(detach) el volumen con ID vol-0e27b5ed70afb0339 de la instancia i-0eafbca1d2552e94c
+      
+![Captura EBS-14c](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_14c.PNG)
+
 
      Finaliza tu instancia EC2. ¿Qué comando ejecutaste? ¿Cuál es la salida?
 
+     Comando empleado:aws ec2 terminate-instances --instance-ids i-0eafbca1d2552e94c
+     
+![Captura EBS-14d](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_14d.PNG)
+     
