@@ -267,7 +267,8 @@
   ![Captura EBS-12c](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_12c.PNG)
       
 
-      Ejecuta lo siguiente. Donde vea "renamed_/dev/sdh1" y "renamed_/dev/shd2", usa los nombres que se te proporcionó AWS en el paso 11.
+      Ejecuta lo siguiente. Donde vea "renamed_/dev/sdh1" y "renamed_/dev/shd2", usa los nombres que se te proporcionó 
+      AWS en el paso 11.
 
        mdadm --create /dev/md0 --level 0 --metadata=1.1
       --raid-devices 2 renamed_/dev/sdh1 renamed_/dev/sdh2
