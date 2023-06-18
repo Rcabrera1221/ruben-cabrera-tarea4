@@ -252,9 +252,20 @@
          apt-get update
          apt-get install mdadm
 
-      Escribe "y" y presiona enter cuando se te solicite, seleccione "No configuration"
+
+  ![Captura EBS-12a](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_12a.PNG)
+
+     Escribe "y" y presiona enter cuando se te solicite, seleccione "No configuration"
+  
+  ![Captura EBS-12b](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_12b.PNG)
+
+     
 
       Cuando se te solicite y presiona enter. Ahora ejecutamos mdadm para crear un arreglo RAID 0 en los dos volúmenes.
+
+
+  ![Captura EBS-12c](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_12c.PNG)
+      
 
       Ejecuta lo siguiente. Donde vea "renamed_/dev/sdh1" y "renamed_/dev/shd2", usa los nombres que se te proporcionó AWS en el paso 11.
 
@@ -262,7 +273,13 @@
       --raid-devices 2 renamed_/dev/sdh1 renamed_/dev/sdh2
       ¿Cuál es la salida?
       
-  13. Ahora, podemos comprobar el estado de la matriz RAID 0. Emite lo siguiente.
+      La salida indica que se ha iniciado con éxito el arreglo RAID 0 /dev/md0
+
+  ![Captura EBS-12d](https://github.com/Rcabrera1221/ruben-cabrera-tarea4/blob/main/capturas/ebs_12d.PNG)
+      
+
+      
+  14. Ahora, podemos comprobar el estado de la matriz RAID 0. Emite lo siguiente.
 
         mdadm --detail /dev/md0
       
@@ -276,7 +293,7 @@
 
       ¿Cuál es la salida?
       
- 14. Finalizamos este laboratorio deteniendo el arreglo RAID 0, separando y eliminando ambos volúmenes de EBS y luego finalizando
+ 15. Finalizamos este laboratorio deteniendo el arreglo RAID 0, separando y eliminando ambos volúmenes de EBS y luego finalizando
      la instancia EC2. Para detener el arreglo RAID 0, haz lo siguiente desde su instancia EC2.
         cd /
         unmount /dev/md0
